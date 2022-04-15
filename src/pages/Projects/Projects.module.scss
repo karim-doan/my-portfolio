@@ -1,0 +1,322 @@
+
+@import '../animations/animation.module.scss';
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    position: relative;
+    height: auto;
+    background-color: #f5f5f5;
+    padding: 100px 0;
+}
+
+.Light {
+    background-color: #ffffff; 
+}
+
+.titleSubject {
+    width: 100%;
+}
+
+.titleText {
+    position: relative;
+    width: 400px;
+    margin: auto;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+    animation: textTitleAppearance ease-in 1s;
+
+}
+
+.contentContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.contentHeader {
+    position: relative;
+    height: 40px;
+    width: 1000px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+.underline {
+    position: relative;
+    border: 1px solid #444649;
+    width: 50px;
+    margin: 5px auto 50px;
+    text-align: center;
+    animation: textTitleAppearance ease-in 1.2s; 
+}
+
+.btnOption {
+    width: 200px;
+    padding: 5px 10px;
+    font-size: 1.3rem;
+    cursor: default;
+}
+
+.active {
+    font-weight: 500;
+    background-color: #f9794c;
+    animation: btnColorActive 0.3s;
+    color: white;
+}
+
+.backgroundContainer {
+    position: absolute;
+    width: 800px;
+    height: 40px;
+}
+
+.backgroundColor {
+    position: relative;
+    left: 0;
+    width: calc(100%/3);
+    height: 40px;
+    color: white;
+    background-color: #f9794c;
+}
+
+.underlineTitle {
+    animation: underlineTitle 0.4s;
+    height: 100%;
+    width: 100%;
+}
+
+.galleryContainer {
+    padding-top: 20px;
+    max-width: 1200px;
+    min-height: 300px;
+    margin: auto;
+}
+
+.gallery {
+    display: flex;
+    max-width: inherit;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.galleryItemOutline {
+    animation: showItem 1s; 
+    transition: ease-in 0.8s;
+}
+
+// .galleryItem {
+//     position: relative;
+//     display: flex;
+//     align-items: center;
+//     background-color: #fdc7b5;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-position: center;
+//     width: 400px;
+//     height: 225px;
+//     overflow: hidden;
+// }
+
+.galleryItem {
+    position: relative;
+    // display: flex;
+    align-items: center;
+    background-color: #fdc7b5;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: 225px;
+    overflow: hidden;
+    transform: translateY(-50px);
+    transition: ease-in 0.3s;
+    opacity: 0.6;
+    
+}
+
+.galleryItemShow {
+    transform: translateY(0);   
+    opacity: 1;
+}
+
+.galleryItem:hover {
+    background-color: #f5f5f5;
+    background-image: unset !important;
+    box-shadow: 0px 0px 12px 2px #dedede;
+    animation: fadeAway 1s;
+    z-index: 9;
+}
+
+.galleryItem:hover .cardContainer {
+    display: block;
+    // animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+.cardContainer {
+    display: none;
+    width: 100%;
+}
+
+.galleryTitle {
+    position: relative;
+    cursor: default;
+    animation: cardZoomDown ease-in 0.5s;
+}
+
+.galleryName {
+    color: #333;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.galleryType {
+    text-align: center;
+    color: #ef3f2d;
+    font-size: 1.4rem;
+}
+
+.btnGallery {
+    position: relative;
+    text-align: center;
+    font-size: 1.4rem;
+    border: 2px solid #f9794c;
+    width: 150px;
+    margin: 69px auto 0px;
+    cursor: default;
+    animation: cardZoomUp ease-in 0.5s;
+    font-weight: 300;
+}
+
+.btnGallery:hover {
+    background-color: #f9794c;
+    color: #fff;
+    font-weight: 300;
+    z-index: 10;
+    cursor: default;
+}
+
+.detailContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(122, 122, 122, 0.5);
+    z-index: 10;
+    // display: none;
+
+    .detailItem {
+        position: relative;
+        width: 71vh;
+        height: 71vh;
+        margin: 110px auto;
+        background-color: #fff;
+        box-shadow: 0px 0px 8px 3px #424949;
+        z-index: 0;
+    }
+
+    .imgIllustration {
+        height: 300px;
+        text-align: center;
+        border-bottom: 8px solid #dedede;
+        padding: 2px 0;
+
+        .imgItem {
+            height: 100%;
+        }
+    }
+
+    .content {
+        margin: 20px 20px 0;
+
+        .title {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .underlineBar {
+            border: 1px solid #dedede;
+            margin: 9px auto;
+        }
+
+        .briefDescription {
+            color: #666;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        .description {
+            width: 100%;
+            height: 40px;
+            line-height: 20px;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            display: -webkit-box;
+        }
+    }
+
+    .toolbar {
+        position: relative;
+        bottom: 0;
+        height: 39px;
+        width: 100%;
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .iconToolbar {
+        color: white;
+        line-height: 39px;
+        font-size: 1.6rem;
+        padding: auto;
+        margin: auto;
+    }
+
+    .btnView {
+        height: 100%;
+        min-width: 90px;
+        padding: 0 10px;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 39px;
+        color: white;
+        background-color: #f9794c;
+        cursor: default;
+    }
+
+    .btnClose {
+        color: #666;
+        display: flex;
+        align-items: center;
+        display: flex;
+        align-items: center;
+    }
+} 
+
+
+@media screen and (max-width: 700px) {
+    body {
+        .nav-lists {
+            position: -webkit-sticky;
+        }
+        .btnOption {
+            width: unset;
+            min-width: 100px;
+        }
+
+        .galleryItemOutline + .galleryItemOutline {
+            margin-top: 5px;
+        }
+    }
+}
+
+

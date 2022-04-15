@@ -1,0 +1,171 @@
+@import '../animations/animation.module.scss';
+
+body {
+    --colorAbout: #f9794c;
+}
+
+.About {
+    background-color: #f5f5f5;
+    width: 100%;
+    padding: 100px 0;
+
+    .titleSubject {
+        width: 100%;
+    }
+
+    .titleText {
+        position: relative;
+        width: 400px;
+        margin: auto;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 3rem;
+        animation: textTitleAppearance ease-in 1s;
+
+    }
+
+    .underline {
+        position: relative;
+        border: 1px solid #444649;
+        width: 150px;
+        margin: 5px auto 60px;
+        text-align: center;
+        animation: textTitleAppearance ease-in 1.2s;
+    }
+
+    .container {
+        max-width: 800px;
+        min-height: 1100px;
+        padding: 50px 100px;
+        margin: 39px auto;
+        background-color: #ffffff;
+        box-shadow: 0px 0px 12px 2px #dedede;
+        border-radius: 5px;
+        animation: showItem ease-in 1s;
+
+        .header {
+            padding-bottom: 50px;
+            animation: cardZoomUp 1.2s;
+
+            .name {
+                text-transform: uppercase;
+                font-size: 3rem;
+                font-weight: 600;
+                color: var(--colorAbout);
+            }
+
+            .positionApply {
+                font-weight: 400;
+                font-size: 1.8rem;
+            }
+        }
+
+        .titleFormatCenter {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        .titleContainer {
+            position: relative;
+            border-bottom: 2px solid #dedede;
+            padding-bottom: 5px;
+            margin: 15px auto;
+            text-transform: uppercase;
+            color: var(--colorAbout);
+        }
+
+        .titleContentContainer {
+            position: relative;
+            font-size: 18px;
+        }
+
+        .titleSubContainer {
+            display: flex;
+            font-weight: 400px;
+            margin-bottom: 6px;
+        }
+
+        .indentifierContact {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 115px;
+            height: 150px;
+        }
+
+        .indentifierImage {
+            height: 100%;
+        }
+
+        .titleContent {
+            font-weight: 500;
+            width: 120px;
+            padding-left: 5px;
+        }
+
+        .detailedContent {}
+
+        .subjectContainer {
+            animation: cardZoomUp 1.3s;
+        }
+
+        .contact {
+            position: relative;
+
+            .phone {}
+
+            .email {}
+
+            .facebook {}
+
+            .zalo {}
+
+            .github {}
+        }
+
+
+        .skill {}
+
+        .education {}
+
+        .certification {}
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    body {
+
+        .btnOption {
+            width: unset;
+            min-width: 100px;
+        }
+
+        .container {
+            padding: 50px 10px !important;
+        }
+
+        .subject {
+            justify-content: center;
+            width: min-content;
+            margin: auto;
+        }
+
+        .titleContent {
+            width: max-content !important;
+            margin: auto;
+        }
+
+        .titleSubContainer {
+            display: block !important;
+            text-align: center;
+        }
+
+        .indentifierContact {
+            position: relative !important;
+            margin: auto;
+        }
+    }
+
+}

@@ -1,0 +1,53 @@
+@keyframes showItem {
+    from {
+        transform: scale(0.5);
+        transform: translateY(30px);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateY(0);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes identifier {}
+
+@keyframes cardZoomDown {
+    from {
+        top: -55px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+
+@keyframes cardZoomUp {
+    from {
+        top: 55px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes textTitleAppearance {
+    from {
+        transform: translateX(500px);
+        right: 0;
+        opacity: 0.2;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
