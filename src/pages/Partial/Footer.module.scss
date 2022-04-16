@@ -1,16 +1,16 @@
 .TopFooter {
     width: 0;
     height: 0;
-    border-color: #f5f5f5 #666;
+    border-color: #f5f5f5 #333;
     border-style: solid;
     border-width: 6vw 50vw 0;
 }
 
 .Footer {
     position: relative;
-    min-height: 100px;
+    min-height: 100%; 
     min-width: 100%;
-    background-color: #666;
+    background-color: #333;
     padding: 20px auto;
 
     .footerContainer {
@@ -20,19 +20,23 @@
 
         .footerContent {
             padding: 35px 0;
-            background-color: #333;
+            background-color: var(--colorMain);
         }
 
         .goTop {
             position: relative;
             display: flex;
             justify-content: center;
-
         }
-        
+
         .goTopContainer {
             position: relative;
             top: 35px;
+        }
+
+        .goTopContainer .iconContact:hover .icon {
+            animation: gotopAni ease-in 0.5s;
+
         }
 
         .iconContainer {
@@ -41,12 +45,12 @@
             margin: 10px 0;
 
             .goTop {
-                background-color: orangered;
+                background-color: #e93434;
                 color: #ffffff;
             }
 
             .goTop:hover {
-                background-color: orangered;
+                background-color: #e93434;
                 animation: none;
             }
         }
@@ -61,7 +65,7 @@
         }
 
         .iconContact:hover {
-            background-color: lightblue;
+            background-color: #b0e4e9;
         }
 
         .iconContact:hover .icon {
@@ -82,6 +86,7 @@
             line-height: 16px;
             padding: 10px;
             height: 16px;
+            color: white;
         }
 
         .iconCopyRight {
@@ -92,12 +97,107 @@
     }
 }
 
-@keyframes iconHover {
+.package {
+    margin-top: 50px;
+    height: 300px;
+    width: 100%;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: white
+}
+
+.underline {
+    position: relative;
+    border: 1px solid #fff;
+    width: 150px;
+    margin: 5px auto 30px;
+    text-align: center;
+    animation: textTitleAppearance ease-in 1.2s;
+}
+
+.question {
+    padding-bottom: 15px;
+    color: #b0e4e8;
+    font-size: 1.3rem;
+    cursor: default;
+}
+
+.ContactContainer {
+    display: block;
+    position: relative;
+    min-width: 360px;
+    margin: auto;
+    text-align: center;
+}
+
+.formContainer {
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.input {
+    width: 96%;
+    outline: none;
+    margin: 2px 1%;
+}
+
+.inputEmail {
+    height: 30px;
+}
+
+.inputMessage {
+    height: 80px;
+
+}
+
+.btnSubmit {
+    text-transform: uppercase;
+    position: relative;
+    float: right;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: default;
+}
+
+.btnSubmit:hover {
+    border: 1px solid #f9794c;
+    background-color: #f9794c;
+}
+
+@keyframes gotopAni {
     from {
-        transform: translateY(-38px)
+        transform: translateY(15px);
+        color: red;
     }
 
     to {
-        transform: translateY(0)
+        transform: translateY(-15px);
+        color: white;
+
+    }
+}
+
+
+@keyframes iconHover {
+    from {
+        transform: translateY(-38px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .TopFooter {
+        border-width: 6vw calc(50vw - 9px) 0;
+
     }
 }

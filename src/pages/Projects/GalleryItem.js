@@ -16,15 +16,13 @@ function GalleryItem({
     const handleBtn = () => {
         dispatch(actions.addItem(id))
     } 
-
-
+      
     return (
         <div className={clsx(styles.galleryItemOutline)}>
             <div
                 key={id}
                 id={id}
                 className={clsx(styles.galleryItem, { [styles.galleryItemShow]: show })}
-                // className={clsx(styles.galleryItem, styles.galleryItemShow)}
                 style={{ backgroundImage: `url(${image.thumbnail})` }}
             >
                 <div className={clsx(styles.cardContainer)}>

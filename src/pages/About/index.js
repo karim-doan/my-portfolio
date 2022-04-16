@@ -1,95 +1,39 @@
 
 import clsx from "clsx";
 import styles from "./About.module.scss";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { fab, faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faPhone, faPhoneSquare, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import Contact from './Contact.js'
 import myImage from '../../images/myImage.jpg'
+import { myInfo } from '../../Data'
 
 function About({ id }) {
+
+  const { gerneral,
+    contacts,
+    objective,
+    education,
+    skill,
+    project,
+    certification } = myInfo
+
   return (
     <div id={id} className={clsx(styles.About)}>
-      <div clsx={clsx(styles.titleSubject)}>
-        <h1 className={clsx(styles.titleText)}>My Document</h1>
+      <div id='Ab-titleContainer'>
+        <div clsx={clsx(styles.titleSubject)}>
+          <h1 className={clsx(styles.titleText)}>My Document</h1>
+        </div>
+        <div className={clsx(styles.underline)}></div>
       </div>
-      <div className={clsx(styles.underline)}></div>
-      <div className={clsx(styles.container)}>
+      <div id='Ab-titleContent' className={clsx(styles.container)}>
         <div className={clsx(styles.header)}>
-          <div className={clsx(styles.name, styles.titleFormatCenter)}>Doan Hoang Kim</div>
-          <div className={clsx(styles.positionApply, styles.titleFormatCenter)}>Frontend Developer</div>
+          <div className={clsx(styles.name, styles.titleFormatCenter)}>{gerneral.name}</div>
+          <div className={clsx(styles.positionApply, styles.titleFormatCenter)}>{gerneral.position}</div>
         </div>
 
         <div className={clsx(styles.contact, styles.subjectContainer)}>
           <div className={clsx(styles.titleFormatCenter, styles.titleContainer)}>Contact information</div>
-          <div className={clsx(styles.titleContentContainer)}>
-            <div className={clsx(styles.titleSubContainer)}>
-              <div className={clsx(styles.subject, 'd-flex')}>
-                <div className={clsx(styles.icon)}>
-                  <FontAwesomeIcon icon={faPhone} />
-                </div>
-                <div className={clsx(styles.titleContent)}>
-                  Phone
-                </div>
-              </div>
-              <div className={clsx(styles.detailedContent)}>
-                (84) 967718190
-              </div>
-            </div>
-            <div className={clsx(styles.titleSubContainer)}>
-              <div className={clsx(styles.subject, 'd-flex')}>
-                <div className={clsx(styles.icon)}>
-                  <FontAwesomeIcon icon={faEnvelope} />
-                </div>
-                <div className={clsx(styles.titleContent)}>
-                  Email
-                </div>
-              </div>
-              <div className={clsx(styles.detailedContent)}>
-                hoangkim.work99@gmail.com
-              </div>
-            </div>
-            <div className={clsx(styles.titleSubContainer)}>
-              <div className={clsx(styles.subject, 'd-flex')}>
-                <div className={clsx(styles.icon)}>
-                  <FontAwesomeIcon icon={faFacebook} />
-                </div>
-                <div className={clsx(styles.titleContent)}>
-                  Facebook
-                </div>
-              </div>
-              <div className={clsx(styles.detailedContent)}>
-                https://www.facebook.com/kim99.doan/
-              </div>
-            </div>
-            <div className={clsx(styles.titleSubContainer)}>
-              <div className={clsx(styles.subject, 'd-flex')}>
-                <div className={clsx(styles.icon)}>
-                  <FontAwesomeIcon icon={faPhoneSquare} />
-                </div>
-                <div className={clsx(styles.titleContent)}>
-                  Zalo
-                </div>
-              </div>
-              <div className={clsx(styles.detailedContent)}>
-                0967718190 / 0767108684
-              </div>
-            </div>
-            <div className={clsx(styles.titleSubContainer)}>
-              <div className={clsx(styles.subject, 'd-flex')}>
-                <div className={clsx(styles.icon)}>
-                  <FontAwesomeIcon icon={faGithub} />
-                </div>
-                <div className={clsx(styles.titleContent)}>
-                  Github
-                </div>
-              </div>
-              <div className={clsx(styles.detailedContent)}>
-                https://github.com/hoangkim58
-              </div>
-            </div>
 
+          <Contact contacts={contacts} />
 
-          </div>
           <div className={clsx(styles.indentifierContact)}>
             <img
               className={clsx(styles.indentifierImage)}
@@ -97,40 +41,15 @@ function About({ id }) {
             />
           </div>
         </div>
-
-        <div className={clsx(styles.skill, styles.subjectContainer)}>
-          <div className={clsx(styles.titleFormatCenter, styles.titleContainer)}>Skill</div>
+        <div className={clsx(styles.objective, styles.subjectContainer)}>
+          <div className={clsx(styles.titleFormatCenter, styles.titleContainer)}>objective</div>
           <div className={clsx(styles.titleContentContainer)}>
             <div className={clsx(styles.titleSubContainer)}>
               <div className={clsx(styles.titleContent)}>
-                Programming Languages
+              {objective.name}
               </div>
               <div className={clsx(styles.detailedContent)}>
-                Score: 500
-              </div>
-            </div>
-            <div className={clsx(styles.titleSubContainer)}>
-              <div className={clsx(styles.titleContent)}>
-                Library
-              </div>
-              <div className={clsx(styles.detailedContent)}>
-                Score: 500
-              </div>
-            </div>
-            <div className={clsx(styles.titleSubContainer)}>
-              <div className={clsx(styles.titleContent)}>
-                Tools
-              </div>
-              <div className={clsx(styles.detailedContent)}>
-                Score: 500
-              </div>
-            </div>
-            <div className={clsx(styles.titleSubContainer)}>
-              <div className={clsx(styles.titleContent)}>
-                Databases
-              </div>
-              <div className={clsx(styles.detailedContent)}>
-                Score: 500
+                {objective.content}
               </div>
             </div>
           </div>
@@ -140,10 +59,82 @@ function About({ id }) {
           <div className={clsx(styles.titleContentContainer)}>
             <div className={clsx(styles.titleSubContainer)}>
               <div className={clsx(styles.titleContent)}>
-                2017 - 2022
+                {education.time}
+              </div>
+              <ul className={clsx(styles.detailedContent)}>
+                <li>{education.content}</li>
+                <li>{education.at}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className={clsx(styles.skill, styles.subjectContainer)}>
+          <div className={clsx(styles.titleFormatCenter, styles.titleContainer)}>Skill</div>
+          <div className={clsx(styles.titleContentContainer)}>
+            <div className={clsx(styles.titleSubContainer)}>
+              <div className={clsx(styles.titleContent)}>
+                Programming Languages
               </div>
               <div className={clsx(styles.detailedContent)}>
-                Score: 500
+                {skill.programLanguages}
+              </div>
+            </div>
+            <div className={clsx(styles.titleSubContainer)}>
+              <div className={clsx(styles.titleContent)}>
+                Library / Framework
+              </div>
+              <div className={clsx(styles.detailedContent)}>
+                {skill.library}
+              </div>
+            </div>
+            <div className={clsx(styles.titleSubContainer)}>
+              <div className={clsx(styles.titleContent)}>
+                Tools
+              </div>
+              <div className={clsx(styles.detailedContent)}>
+                {skill.tools}
+              </div>
+            </div>
+            <div className={clsx(styles.titleSubContainer)}>
+              <div className={clsx(styles.titleContent)}>
+                Databases
+              </div>
+              <div className={clsx(styles.detailedContent)}>
+                {skill.database}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={clsx(styles.projects, styles.subjectContainer)}>
+          <div className={clsx(styles.titleFormatCenter, styles.titleContainer)}>Personal projects</div>
+          <div className={clsx(styles.titleContentContainer)}>
+            <div className={clsx(styles.titleSubContainer)}>
+              <div className={clsx(styles.titleContent)}>
+                Fake Shopee
+              </div>
+              <div className={clsx(styles.detailedContent)}>
+                {project.shopee}
+              </div>
+            </div>
+          </div>
+          <div className={clsx(styles.titleContentContainer)}>
+            <div className={clsx(styles.titleSubContainer)}>
+              <div className={clsx(styles.titleContent)}>
+                Gift Game
+              </div>
+              <div className={clsx(styles.detailedContent)}>
+                {project.giftgame}
+              </div>
+            </div>
+          </div>
+          <div className={clsx(styles.titleContentContainer)}>
+            <div className={clsx(styles.titleSubContainer)}>
+              <div className={clsx(styles.titleContent)}>
+                Netflix
+              </div>
+              <div className={clsx(styles.detailedContent)}>
+                {project.netflix}
               </div>
             </div>
           </div>
@@ -156,7 +147,7 @@ function About({ id }) {
                 TOEIC
               </div>
               <div className={clsx(styles.detailedContent)}>
-                Score: 500
+                {certification.toeic}
               </div>
             </div>
           </div>

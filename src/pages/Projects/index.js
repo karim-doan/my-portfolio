@@ -1,8 +1,7 @@
 
 import styles from './Projects.module.scss'
 import clsx from 'clsx'
-import { useEffect, useState } from 'react'
-import { types, projects } from './Datas.js'
+import { types, projects } from '../../Data'
 import { useStore, actions } from '../../stores'
 import GalleryItem from './GalleryItem'
 import DetailItem from './DetailItem.js'
@@ -34,49 +33,51 @@ function Projects({ id, Light }) {
 
   return (
     <div id={id} className={theme} >
-      <div clsx={clsx(styles.titleSubject)}>
-        <h1 className={clsx(styles.titleText)}>Projects</h1>
+      <div id='Pj-titleContainer'>
+        <div clsx={clsx(styles.titleSubject)}>
+          <h1 className={clsx(styles.titleText)}>Projects</h1>
+        </div>
+        <div className={clsx(styles.underline)}></div>
       </div>
-      <div className={clsx(styles.underline)}></div>
-      <div className={clsx(styles.contentContainer)}>
-        <ul className={clsx(styles.contentHeader)}>
-          {/* <div className={clsx(styles.backgroundContainer)}>
+      <div id='Pj-titleContent'>
+        <div className={clsx(styles.contentContainer)}>
+          <ul className={clsx(styles.contentHeader)}>
+            {/* <div className={clsx(styles.backgroundContainer)}>
             <div className={clsx(styles.backgroundColor)}></div>
           </div> */}
-          {types.map(item =>
-            <li
-              onClick={() => { handleBtnType(item) }}
-              className={type === item ? btnOptionActive : btnOption}
-              key={item}
-            >
-              {item}
-              <div className='underlineTitle'></div>
-            </li>
-          )}
-        </ul>
-      </div>
-      <div className={clsx(styles.galleryContainer)}>
-        <div className={clsx(styles.gallery)}>
-          {projects.map(project => {
-            // return (
-            //   <GalleryItem
-            //     key={project.id}
-            //     {...project}
-            //     show
-            //   />
-            // )
-            if (checkType(project.type, type)) {
-              return (
-                <GalleryItem
-                  key={project.id}
-                  {...project}
-                />
-              )
-            }
-          }
-          )}
+            {types.map(item =>
+              <li
+                onClick={() => { handleBtnType(item) }}
+                className={type === item ? btnOptionActive : btnOption}
+                key={item}
+              >
+                {item}
+                <div className={clsx(styles.underlineContainer)}>
+                  <div className={clsx({ [styles.underlineTitle]: type === item })}></div>
+                </div>
+              </li>
+            )}
+          </ul>
         </div>
-        {itemIndex && <DetailItem itemIndex={itemIndex} />}
+        <div className={clsx(styles.galleryContainer)}>
+          <div className={clsx(styles.gallery)}>
+            {projects.map(project => {
+
+
+              if (checkType(project.type, type)) {
+ 
+                return (
+                  <GalleryItem
+                    key={project.id}
+                    {...project}
+                  />
+                )
+              }
+            }
+            )}
+          </div>
+          {itemIndex && <DetailItem itemIndex={itemIndex} />}
+        </div>
       </div>
 
     </div>
