@@ -1,13 +1,11 @@
 @keyframes showItem {
-    from {
-        transform: scale(0.5);
-        transform: translateY(30px);
+    from { 
+        transform: translateY(50px);
         opacity: 0.5;
     }
 
     to {
-        transform: translateY(0);
-        transform: scale(1);
+        transform: translateY(0); 
         opacity: 1;
     }
 }
@@ -65,31 +63,30 @@
 }
 
 @keyframes navbarAnimation {
-    from {
-        opacity: 0.6;
+    from { 
         transform: translateY(-50px)
     }
 
-    to {
-        opacity: 1;
+    to { 
         transform: translateY(0px)
     }
 }
 
 @keyframes btnColorActive {
     from {
-        background-color: #fff;
-
+        background-color: #fff; 
         width: 0%;
         border-radius: 0%;
         opacity: 0.8;
+        border-color: transparent;
     }
 
     to {
         width: 120%;
         border-radius: 30%;
-        background-color: #f9794c;
+        background-color: transparent;
         opacity: 0;
+        border-color: #f44948;
     }
 }
 
@@ -100,5 +97,43 @@
 
     to {
         background-color: #e93434;
+    }
+}
+
+@keyframes labelShow {
+    from {
+        opacity: 0;
+        color: transparent;
+        transform: translateY(-5px);
+        width: 0;
+    }
+
+    to {
+        opacity: 1;
+        color: transparent;
+        transform: translateY(0px);
+        width: 20%;
+    }
+}
+
+@keyframes gradualLager {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes detailItemShow {
+    from {
+        transform: scale(0.8); 
+        opacity: 0.8;
+    }
+
+    to {
+        transform: translateY(0);
+        transform: scale(1);
+        opacity: 1;
     }
 }

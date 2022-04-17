@@ -16,18 +16,17 @@ export default function ImageSlide(images) {
         const SlideShowLenght = imageData.length
         if (SlideShowLenght === 1) setSlide(false)
  
-        
     }, [])
-    
-    $(`.${clsx(styles.carousel)}`).on('click', () => $(this).attr('id')) 
+
+    $(`.${clsx(styles.carousel)}`).on('click', () => $(this).attr('id'))
 
     return (
         <>
-            {imageData.map(image =>
-                <>
+            {imageData.map((image, index) =>
+                <div>
                     <img src={image} className={clsx(styles.imgItem)} alt='item' />
                     {slide &&
-                        ( 
+                        (
                             <div className={clsx(styles.carouselContainer)}>
                                 <div id='arrowLeft' className={clsx(styles.carousel)}>
                                     <FontAwesomeIcon
@@ -44,8 +43,7 @@ export default function ImageSlide(images) {
                             </div>
                         )
                     }
-                </>
-
+                </div>
             )}
         </>
     )

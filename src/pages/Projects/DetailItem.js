@@ -1,5 +1,5 @@
 
-
+import { useEffect } from 'react'
 import clsx from 'clsx'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faX, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
@@ -7,15 +7,29 @@ import styles from './Projects.module.scss'
 import { projects } from '../../Data/index.js'
 import { useStore, actions } from '../../stores'
 import ImageSlide from './ImageSlide.js'
+import $ from 'jquery'
 
 function DetailItem({ itemIndex }) {
-
+    console.log('re-render')
     const [state, dispatch] = useStore()
     let props = ''
 
-    const handleClose = () => {
+    const handleBtnClose = () => {
         dispatch(actions.resetItem())
     }
+
+    useEffect(() => {
+        const btnClose = `.${clsx(styles.btnClose)}`
+        const item = `.${clsx(styles.detailItem)}`
+        const container = `.${clsx(styles.detailContainer)}`
+
+        $(btnClose).on('click', handleBtnClose)
+        $(item).on('click', function (e) {
+            e.stopPropagation();
+        });
+        $(container).on('click', handleBtnClose)
+
+    }, [])
 
     return (
         projects.map(project => {
@@ -23,7 +37,6 @@ function DetailItem({ itemIndex }) {
                 return (
                     < div
                         className={clsx(styles.detailContainer)}
-                        // onClick={() => handleClose()}
                         key={itemIndex}
                     >
                         <div className={clsx(styles.detailItem)}>
@@ -77,7 +90,6 @@ function DetailItem({ itemIndex }) {
                                     </a>
                                     <div
                                         className={clsx(styles.btnClose, styles.btn)}
-                                        onClick={() => handleClose()}
                                     >
                                         <div>
                                             <FontAwesomeIcon

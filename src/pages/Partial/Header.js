@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
 import $ from 'jquery'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import clsx from 'clsx';
 import styles from './Header.module.scss';
-
 
 function Header() {
 
@@ -14,10 +13,24 @@ function Header() {
     const [navActive, setNavActive] = useState(false)
     const [projectActive, setProjectActive] = useState(false)
     const [aboutActive, setAboutActive] = useState(false)
+    const { pathname } = useLocation()
 
     useEffect(() => {
         setHeightScreen(window.innerHeight)
     }, [heightScreen])
+    
+    // handleGotop
+    useEffect(() => {
+
+        const goto = () => {
+            window.scrollTo(0, heightScreen)
+        }
+
+        return () => {
+            goto()
+        }
+ 
+    }, [pathname])
 
     //handleMouseEnter handleMouseLeave btn-see__more, **hover event
     useEffect(() => {
@@ -51,7 +64,7 @@ function Header() {
     useEffect(() => {
         const handleScroll = () => {
             const NavBarTag = heightScreen + 50
-            
+
             if (window.scrollY >= NavBarTag) {
                 setNavActive(true)
             }
@@ -114,7 +127,7 @@ function Header() {
 
 
             setTimeout(() => {
-                $('#Ab-titleContent').show() 
+                $('#Ab-titleContent').show()
             }, 300);
         }
     }, [aboutActive])
@@ -145,11 +158,11 @@ function Header() {
             <nav id='navbar-lists' className={clsx(styles.navbarLists, 'd-flex')}>
                 <ul className="grid justify-content-between " style={{ width: '1200px' }} >
                     <li >
-                        <Link className={clsx(styles.headerPageLink, 'a-prevent-default')} to='/'>Home</Link>
+                        <Link className={clsx(styles.headerPageLink, 'a-prevent-default')} to='/myprofile'>Home</Link>
                     </li>
                     <li >
-                        <Link className={clsx(styles.headerPageLink, 'a-prevent-default')} to='/About'>About</Link>
-                        <Link className={clsx(styles.headerPageLink, 'a-prevent-default')} to='/Projects'>Projects</Link>
+                        <Link className={clsx(styles.headerPageLink, 'a-prevent-default')} to='/myprofile/About'>About</Link>
+                        <Link className={clsx(styles.headerPageLink, 'a-prevent-default')} to='/myprofile/Projects'>Projects</Link>
                     </li>
                 </ul>
             </nav>

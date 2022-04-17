@@ -63,15 +63,13 @@ function Projects({ id, Light }) {
           <div className={clsx(styles.gallery)}>
             {projects.map(project => {
 
-
-              if (checkType(project.type, type)) {
- 
-                return (
+              if (checkType(project.type, type)) { 
+                return ( 
                   <GalleryItem
                     key={project.id}
                     {...project}
                   />
-                )
+                )         
               }
             }
             )}

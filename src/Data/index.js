@@ -17,6 +17,7 @@ export const projects = [
       thumbnail: myPortfolio,
       illustration: [myPortfolio, myPortfolioProject],
     },
+    responsive: true,
     urlLive: 'urlLive',
     urlCode: 'urlCode',
 
@@ -32,6 +33,7 @@ export const projects = [
       thumbnail: dayGiftPC,
       illustration: [dayGiftPC],
     },
+    responsive: true,
     urlLive: 'https://hoangkim58.github.io/daygift/',
     urlCode: 'https://github.com/hoangkim58/daygift',
 
@@ -47,6 +49,7 @@ export const projects = [
       thumbnail: fakeShopee,
       illustration: [fakeShopee],
     },
+    responsive: false,
     urlLive: 'https://hoangkim58.github.io/fakeshopee/',
     urlCode: 'https://github.com/hoangkim58/fakeshopee/tree/master',
 
@@ -62,6 +65,7 @@ export const projects = [
       thumbnail: 'https://wallpaperaccess.com/full/2588759.jpg',
       illustration: ['https://wallpaperaccess.com/full/2588759.jpg'],
     },
+    responsive: false,
     urlLive: 'urlLive',
     urlCode: 'urlCode',
 
