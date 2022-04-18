@@ -18,7 +18,7 @@ function Header() {
     useEffect(() => {
         setHeightScreen(window.innerHeight)
     }, [heightScreen])
-    
+
     // handleGotop
     useEffect(() => {
 
@@ -29,7 +29,7 @@ function Header() {
         return () => {
             goto()
         }
- 
+
     }, [pathname])
 
     //handleMouseEnter handleMouseLeave btn-see__more, **hover event
@@ -92,9 +92,7 @@ function Header() {
         const isAnimation = clsx(styles.navListsAnimated)
 
         if (navActive) {
-            $('#navbar-lists').addClass('hide')
             setTimeout(() => {
-                $('#navbar-lists').removeClass('hide')
                 $('#navbar-lists').addClass(isAnimation)
             }, 100);
         }

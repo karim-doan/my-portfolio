@@ -10,7 +10,6 @@ import ImageSlide from './ImageSlide.js'
 import $ from 'jquery'
 
 function DetailItem({ itemIndex }) {
-    console.log('re-render')
     const [state, dispatch] = useStore()
     let props = ''
 
@@ -42,9 +41,6 @@ function DetailItem({ itemIndex }) {
                         <div className={clsx(styles.detailItem)}>
                             <div className={clsx(styles.imgIllustration)}>
                                 <ImageSlide images={project.image.illustration} />
-                                {/* {project.image.illustration.map(image =>
-                            )} */}
-
                             </div>
                             <div className={clsx(styles.content)}>
                                 <div className={clsx(styles.title)}>

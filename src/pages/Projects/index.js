@@ -22,22 +22,15 @@ function Projects({ id, Light }) {
     [styles.Light]: Light
   })
 
-  const checkType = (projectType, type) => {
-    if (projectType === type) {
-      return true
-    }
-    if (type === 'All') {
-      return true
-    }
-  }
-
   return (
     <div id={id} className={theme} >
       <div id='Pj-titleContainer'>
         <div clsx={clsx(styles.titleSubject)}>
           <h1 className={clsx(styles.titleText)}>Projects</h1>
         </div>
-        <div className={clsx(styles.underline)}></div>
+        <div className={clsx(styles.underlineContainer)}>
+          <div className={clsx(styles.underline)}></div>
+        </div>
       </div>
       <div id='Pj-titleContent'>
         <div className={clsx(styles.contentContainer)}>
@@ -52,7 +45,7 @@ function Projects({ id, Light }) {
                 key={item}
               >
                 {item}
-                <div className={clsx(styles.underlineContainer)}>
+                <div className={clsx(styles.underlineTitleContainer)}>
                   <div className={clsx({ [styles.underlineTitle]: type === item })}></div>
                 </div>
               </li>
@@ -62,15 +55,13 @@ function Projects({ id, Light }) {
         <div className={clsx(styles.galleryContainer)}>
           <div className={clsx(styles.gallery)}>
             {projects.map(project => {
-
-              if (checkType(project.type, type)) { 
-                return ( 
-                  <GalleryItem
-                    key={project.id}
-                    {...project}
-                  />
-                )         
-              }
+              return (
+                <GalleryItem
+                  key={project.id}
+                  {...project}
+                typeItem={type}
+                />
+              )
             }
             )}
           </div>

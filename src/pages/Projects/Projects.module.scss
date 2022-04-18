@@ -17,11 +17,12 @@ a {
 
 .titleSubject {
     width: 100%;
+    height: 30px;
 }
 
 .titleText {
     position: relative;
-    width: max-content;
+    width: 363px;
     margin: auto;
     text-transform: uppercase;
     text-align: center;
@@ -45,13 +46,30 @@ a {
     margin: 0 10px;
 }
 
+.imgContainer {
+    transform: translateX(0px);
+    display: flex;
+    position: relative;
+    // transition: cubic-bezier(1, 0, 0, 1) 0.2s;
+}
+
+.hide { 
+    // min-width: 0 !important;
+    animation: fadeAway 1s ease-in !important;
+}
+.underlineContainer {
+    position: relative; 
+    width: 363px;
+    margin: auto;
+    animation: textTitleAppearance ease-in 1.2s;
+}
 .underline {
     position: relative;
     border: 1px solid #444649;
-    width: 50px;
-    margin: 5px auto 50px;
+    width: calc(363px * 0.2);
+    margin: 5px auto 50px; 
     text-align: center;
-    animation: textTitleAppearance ease-in 1.2s;
+    
 }
 
 .btnOption {
@@ -83,10 +101,10 @@ a {
     background-color: #f9794c;
 }
 
-.underlineContainer {
+.underlineTitleContainer {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 0; 
     height: 100%;
     width: 100%;
     display: flex;
@@ -106,9 +124,11 @@ a {
 
 .galleryContainer {
     padding-top: 20px;
-    max-width: 1200px;
-    min-height: 300px;
+    max-width: 1200px; 
     margin: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content:center;
 }
 
 .gallery {
@@ -120,7 +140,7 @@ a {
 
 .galleryItemOutline {
     position: relative;
-    min-width: 375px;
+    // min-width: 375px;
     height: 225px;
     top: 0;
     left: 0;
@@ -136,14 +156,22 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-width: 375px;
+    width: 375px;
     margin: 2px;
     height: 225px;
     overflow: hidden;
     transform: translateY(-50px);
     transition: ease-in 0.3s;
     opacity: 0.6;
-    
+
+}
+
+.galleryItem:hover {
+    background-color: #f5f5f5;
+    background-image: unset !important;
+    box-shadow: 0px 0px 12px 2px #dedede;
+    animation: gradualAppearance 1s;
+    z-index: 9;
 }
 
 .galleryItemShow {
@@ -152,27 +180,20 @@ a {
     animation: detailItemShow ease-in 0.5s;
 }
 
-.galleryItem:hover {
-    background-color: #f5f5f5;
-    background-image: unset !important;
-    box-shadow: 0px 0px 12px 2px #dedede;
-    animation: fadeAway 1s;
-    z-index: 9;
-}
-
 .galleryItem:hover .cardContainer {
-    display: block; 
+    opacity: 1;
+    display: block;
 }
 
 
 .galleryItemOutline:hover .labelContainer {
-    display: none; 
+    display: none;
 }
 
 .galleryItemContainer {
-    animation: showItem  ease-in 1.2s;
+    animation: showItem ease-in 0.6s;
     color: transparent;
-    
+
 }
 
 .cardContainer {
@@ -232,7 +253,7 @@ a {
     background-color: #9332bb;
     border-bottom: 1px solid wheat;
     color: #fff;
-    padding: 0 8px; 
+    padding: 0 8px;
     border-radius: 0 0 8px 8px;
     animation: labelShow ease-in 0.5s;
 }
@@ -246,7 +267,7 @@ a {
     position: absolute;
     left: -3px;
     z-index: 0;
-    display: block; 
+    display: block;
 }
 
 .label::after {
@@ -259,7 +280,7 @@ a {
     top: 0;
     right: -3px;
     z-index: 0;
-    display: block; 
+    display: block;
 }
 
 .btnGallery:hover {

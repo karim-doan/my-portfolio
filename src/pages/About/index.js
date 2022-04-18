@@ -21,7 +21,9 @@ function About({ id }) {
         <div clsx={clsx(styles.titleSubject)}>
           <h1 className={clsx(styles.titleText)}>My Document</h1>
         </div>
-        <div className={clsx(styles.underline)}></div>
+        <div className={clsx(styles.underlineContainer)}>
+          <div className={clsx(styles.underline)}></div>
+        </div>
       </div>
       <div id='Ab-titleContent' className={clsx(styles.container)}>
         <div className={clsx(styles.header)}>
@@ -46,7 +48,7 @@ function About({ id }) {
           <div className={clsx(styles.titleContentContainer)}>
             <div className={clsx(styles.titleSubContainer)}>
               <div className={clsx(styles.titleContent)}>
-              {objective.name}
+                {objective.name}
               </div>
               <div className={clsx(styles.detailedContent)}>
                 {objective.content}

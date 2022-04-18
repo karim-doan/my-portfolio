@@ -15,7 +15,7 @@ export const projects = [
     type: 'React',
     image: {
       thumbnail: myPortfolio,
-      illustration: [myPortfolio, myPortfolioProject],
+      illustration: [myPortfolio, myPortfolioProject, myPortfolio],
     },
     responsive: true,
     urlLive: 'urlLive',

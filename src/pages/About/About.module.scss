@@ -16,7 +16,7 @@ body {
 
     .titleText {
         position: relative;
-        width: max-content;
+        width: 363px;
         margin: auto;
         text-transform: uppercase;
         text-align: center;
@@ -24,14 +24,17 @@ body {
         animation: textTitleAppearance ease-in 1s;
 
     }
-
+    .underlineContainer {
+        width: 363px;
+        margin: auto;
+        animation: textTitleAppearance ease-in 1.2s;
+    }
     .underline {
         position: relative;
         border: 1px solid #444649;
-        width: 150px;
+        width: calc(363px * 0.3);
         margin: 5px auto 60px;
         text-align: center;
-        animation: textTitleAppearance ease-in 1.2s;
     }
 
     .container {
