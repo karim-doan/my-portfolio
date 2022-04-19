@@ -11,15 +11,18 @@ export default function ImageSlide(images) {
     const [slide, setSlide] = useState(true)
     const [currentSlide, setCurrentSlide] = useState(1)
     const imageData = images.images
-    const imgContainer = useRef() 
-    
+    const imgContainer = useRef()
+
     useEffect(() => {
         const ImgContainer = imgContainer.current
 
         const SlideShowLenght = imageData.length
+
+        const position = 100 / SlideShowLenght
+
         const translateX = (i) => {
-            ImgContainer.style.transform = `translateX(${i * -1}00%)`
-        } 
+            ImgContainer.style.transform = `translateX(${i * -1 * position}%)`
+        }
         const handleScroll = (target) => {
             if (target === 'arrowRight') {
                 if (currentSlide === SlideShowLenght) {
@@ -29,18 +32,18 @@ export default function ImageSlide(images) {
                 }
                 if (currentSlide < SlideShowLenght) {
 
-                    setCurrentSlide(currentSlide + 1)
                     translateX(currentSlide)
+                    return setCurrentSlide(prev => prev + 1)
                 }
             }
             if (target === 'arrowLeft') {
 
                 if (currentSlide === 1) {
                     translateX(SlideShowLenght - 1)
-                    setCurrentSlide(SlideShowLenght)
+                    setCurrentSlide(prev => prev = SlideShowLenght)
                 }
                 if (currentSlide > 1 && currentSlide <= SlideShowLenght) {
-                    setCurrentSlide(prev => prev - 1 )
+                    setCurrentSlide(prev => prev - 1)
                     translateX(currentSlide - 2)
                 }
 
@@ -59,21 +62,30 @@ export default function ImageSlide(images) {
             setSlide(false)
         }
 
-
-    })
+        console.log(currentSlide)
+    }, [currentSlide])
 
 
     return (
         <>
-            <div ref={imgContainer} className={clsx(styles.imgContainer)}>
+            <div
+                ref={imgContainer}
+                className={clsx(styles.imgContainer)}
+            >
                 {
                     imageData.map((image, index) =>
-                        <img
+                        <a
+                            className={clsx(styles.imgLink)}
                             key={index}
-                            src={image}
-                            className={clsx(styles.imgItem)}
-                            alt={`image-${index}`}
-                        />
+                            href={image}
+                            target='_blank'
+                        >
+                            <img
+                                src={image}
+                                alt={`image-${index}`}
+                                className={clsx(styles.imgItem)}
+                            />
+                        </a>
                     )
                 }
             </div>

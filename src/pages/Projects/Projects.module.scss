@@ -51,25 +51,32 @@ a {
     display: flex;
     position: relative;
     // transition: cubic-bezier(1, 0, 0, 1) 0.2s;
+
+    .imgLink {
+        width: 500px;
+        margin: 0;
+    }
 }
 
-.hide { 
+.hide {
     // min-width: 0 !important;
-    animation: fadeAway 1s ease-in !important;
+    animation: fadeAway 0.5s ease-in !important;
 }
+
 .underlineContainer {
-    position: relative; 
+    position: relative;
     width: 363px;
     margin: auto;
     animation: textTitleAppearance ease-in 1.2s;
 }
+
 .underline {
     position: relative;
     border: 1px solid #444649;
     width: calc(363px * 0.2);
-    margin: 5px auto 50px; 
+    margin: 5px auto 50px;
     text-align: center;
-    
+
 }
 
 .btnOption {
@@ -104,7 +111,7 @@ a {
 .underlineTitleContainer {
     position: absolute;
     top: 0;
-    right: 0; 
+    right: 0;
     height: 100%;
     width: 100%;
     display: flex;
@@ -124,11 +131,11 @@ a {
 
 .galleryContainer {
     padding-top: 20px;
-    max-width: 1200px; 
+    max-width: 1200px;
     margin: auto;
     display: flex;
     align-items: flex-end;
-    justify-content:center;
+    justify-content: center;
 }
 
 .gallery {
@@ -297,7 +304,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(122, 122, 122, 0.5);
+    background-color: rgba(122, 122, 122, 0.6);
     display: flex;
     z-index: 10;
     // display: none;
@@ -308,22 +315,23 @@ a {
         max-height: 520px;
         margin: auto;
         background-color: #fff;
-        box-shadow: 0px 0px 8px 3px #424949;
+        box-shadow: 0px 0px 8px 3px #727272;
         z-index: 0;
         animation: detailItemShow ease-out 0.3s;
     }
 
     .imgIllustration {
         position: relative;
+        overflow: hidden;
         display: flex;
         height: 300px;
         text-align: center;
         border-bottom: 8px solid #dedede;
-        padding: 1px;
 
         .imgItem {
             height: 100%;
-            width: 100%;
+            max-width: 498px;
+            margin: 1px;
         }
 
         .carouselContainer {
@@ -414,6 +422,7 @@ a {
         height: 100%;
         min-width: 90px;
         padding: 0 10px;
+        margin: 0;
         text-align: center;
         font-size: 1rem;
         line-height: 39px;
@@ -438,6 +447,20 @@ a {
             position: -webkit-sticky;
         }
 
+        .imgIllustration {
+            width: 383px;
+            height: 210px !important;
+        }
+
+        .imgLink {
+            width: 385px !important;
+
+        }
+
+        .imgItem {
+            height: 210px;
+        }
+
         .btnOption {
             width: unset;
             min-width: 100px;
@@ -449,6 +472,58 @@ a {
 
         .galleryItemOutline+.galleryItemOutline {
             margin-top: 5px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    html {}
+
+    body {
+
+        .galleryItemShow,
+        .underlineContainer,
+        .titleSubContainer {
+            width: 360px;
+        }
+
+        .detailItem {
+            width: 360px;
+        }
+
+        .titleSubContainer {
+            font-size: 1.2rem;
+        }
+
+        .titleText {
+            width: unset;
+            font-size: 2.7rem;
+        }
+
+        .imgIllustration {
+            width: 360px !important;
+            height: 210px !important;
+        }
+
+        .imgLink {
+            width: 360px !important;
+
+        }
+
+        .imgItem {
+            max-width: 360px !important;
+            height: 210px;
+            margin: unset !important;
+        }
+
+        .galleryItem {
+            margin: unset;
+        }
+
+        .btnView {
+            padding: 0 5px !important;
+            margin: 0 !important;
         }
     }
 }

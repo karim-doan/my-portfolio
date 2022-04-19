@@ -65,6 +65,7 @@ function About({ id }) {
               </div>
               <ul className={clsx(styles.detailedContent)}>
                 <li>{education.content}</li>
+                <li>Major: {education.major} - {education.gpa}  </li>
                 <li>{education.at}</li>
               </ul>
             </div>

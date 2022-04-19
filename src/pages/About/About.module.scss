@@ -24,11 +24,13 @@ body {
         animation: textTitleAppearance ease-in 1s;
 
     }
+
     .underlineContainer {
         width: 363px;
         margin: auto;
         animation: textTitleAppearance ease-in 1.2s;
     }
+
     .underline {
         position: relative;
         border: 1px solid #444649;
@@ -105,14 +107,21 @@ body {
         }
 
         .indentifierImage {
-            height: 100%;
+            height: 150px;
+            width: 109px;
         }
 
         .titleContent {
+            position: relative;
+            display: flex;
             font-weight: 500;
             width: 120px;
-            padding-left: 5px;
             text-transform: capitalize;
+        }
+
+        .icon {
+            min-width: 18px;
+            margin-right: 5px;
         }
 
         .detailedContent {
@@ -148,6 +157,7 @@ body {
     }
 }
 
+// general mobile
 @media only screen and (max-width: 700px) {
 
     body {
@@ -180,10 +190,41 @@ body {
             font-size: 20px;
         }
 
+        .inputMessage {
+            width: unset;
+        }
+
         .indentifierContact {
             position: relative !important;
             margin: auto;
         }
     }
 
+}
+
+// Outdated mobile
+@media screen and (max-width: 370px) {
+    html {}
+
+    body {
+
+        .container {
+            padding: 50px 0 !important;
+        }
+
+        .underlineContainer,
+        .subject,
+        .titleSubContainer {
+            width: 360px !important;
+        }
+
+        .titleSubContainer {
+            font-size: 1.2rem;
+        }
+
+        .titleText {
+            width: unset !important;
+            font-size: 2.7rem !important;
+        }
+    }
 }

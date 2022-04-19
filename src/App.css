@@ -25,11 +25,7 @@ ul {
   margin: 0;
   padding: 0;
 }
-
-a+a {
-  margin-left: 20px;
-}
-
+ 
 nav {
   background-color: #422445;
   width: 100%;

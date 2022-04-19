@@ -20,14 +20,13 @@ function GalleryItem({
         dispatch(actions.addItem(id))
     }
     const galleryItem = useRef(null)
- 
+
     useEffect(() => {
         const item = galleryItem.current
         const itemImage = item.querySelector(`.${clsx(styles.galleryItemContainer)}`)
         const label = item.querySelector(`.${clsx(styles.labelContainer)}`)
         const animation = clsx(styles.hide)
-        
-        console.log('re')
+
         const hpp = () => {
 
             if (typeItem === 'All') {
@@ -39,11 +38,11 @@ function GalleryItem({
 
                 if (type !== typeItem) {
 
-                    itemImage.classList.add(animation)                    
+                    itemImage.classList.add(animation)
                     label && label.classList.add(animation)
                     setTimeout(() => {
                         item.style.display = 'none'
-                    }, 1001)
+                    }, 501)
                     return item
                 }
                 // console.log([type,typeItem], )
@@ -52,7 +51,7 @@ function GalleryItem({
 
         hpp()
         return () => {
-            label && label.classList.remove(animation)            
+            label && label.classList.remove(animation)
             itemImage.classList.remove(animation)
             item.style.display = 'flex'
         }
@@ -97,7 +96,6 @@ function GalleryItem({
                     </div>
                 </div>
             }
-
         </div>
     )
 }

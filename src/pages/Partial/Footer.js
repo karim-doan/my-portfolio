@@ -25,7 +25,6 @@ function Footer() {
                                         placeholder="Enter your email..."
                                         name='email' />
                                     <div>
-
                                         <textarea
                                             type='text-area'
                                             className={clsx(styles.inputMessage, styles.input)}

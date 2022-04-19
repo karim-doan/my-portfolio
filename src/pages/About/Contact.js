@@ -31,10 +31,10 @@ export default function Contact(contacts) {
 
                 <div key={contact.id} className={clsx(styles.titleSubContainer)}>
                     <div className={clsx(styles.subject, 'd-flex')}>
+                        <div className={clsx(styles.titleContent)}>
                         <div className={clsx(styles.icon)}>
                             <FontAwesomeIcon icon={icon(contact.name)} />
                         </div>
-                        <div className={clsx(styles.titleContent)}>
                             {contact.name}
                         </div>
                     </div>

@@ -25,12 +25,12 @@ function Header() {
         const goto = () => {
             window.scrollTo(0, heightScreen)
         }
-
+        
         return () => {
             goto()
         }
 
-    }, [pathname])
+    },[pathname])
 
     //handleMouseEnter handleMouseLeave btn-see__more, **hover event
     useEffect(() => {

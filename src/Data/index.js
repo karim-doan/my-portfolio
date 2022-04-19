@@ -2,6 +2,8 @@ import dayGiftPC from '../images/dayGiftPC.png'
 import fakeShopee from '../images/fakeShopee.png'
 import myPortfolio from '../images/myPortfolio.png'
 import myPortfolioProject from '../images/myPortfolioProject.png'
+import myPortfolioProjectTab from '../images/myPortfolioProjectTab.jpg'
+import myPortfolioProjectMobi from '../images/myPortfolioProjectMobi.jpg'
 
 export const types = ['All', 'React', 'JavaScript']
 
@@ -15,11 +17,11 @@ export const projects = [
     type: 'React',
     image: {
       thumbnail: myPortfolio,
-      illustration: [myPortfolio, myPortfolioProject, myPortfolio],
+      illustration: [myPortfolio, myPortfolioProject, myPortfolioProjectTab, myPortfolioProjectMobi],
     },
     responsive: true,
-    urlLive: 'urlLive',
-    urlCode: 'urlCode',
+    urlLive: 'https://github.com/hoangkim58/myprofile',
+    urlCode: 'https://github.com/hoangkim58/myprofile',
 
   },
   {
@@ -60,7 +62,7 @@ export const projects = [
     briefDescription: '',
     description: '',
     framework: 'React JS / Node JS',
-    type: 'JavaScript',
+    type: 'React',
     image: {
       thumbnail: 'https://wallpaperaccess.com/full/2588759.jpg',
       illustration: ['https://wallpaperaccess.com/full/2588759.jpg'],
@@ -110,7 +112,9 @@ export const myInfo = {
   },
   education: {
     time: '2017 - 2022',
-    content: '',
+    content: 'The Deegree of Engineer',
+    major: 'Electronic',
+    gpa: '7.3/10',
     at: 'Sai Gon University'
   },
   skill: {
