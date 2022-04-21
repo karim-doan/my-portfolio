@@ -438,6 +438,75 @@ a {
         display: flex;
         align-items: center;
     }
+
+    .usedTech {
+        position: absolute;
+        top: 0;
+        right: -163px;
+        margin: 0 2px;
+        width: 160px;
+        height: 100%;
+        transform: rotate(0);
+        transition: ease-in 0.6s;
+        display: none;
+
+        .usedTechEffect {
+            width: 50px;
+            height: 100%;
+            animation: rightToLeft ease-in 0.5s;
+        }
+
+        .imgTechContainer {
+            padding: 5px;
+            width: 50px;
+            height: 50px;
+            transform: translateY(0);
+            transition: ease-in-out 0.3s;
+            transition-delay: 0.3s;
+        }
+
+        .rotate {
+            transform: rotate(360deg) !important;
+            transition: ease-in-out 0.8s;
+
+        }
+
+        .imgTech {
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            padding: 5px;
+            box-shadow: 0px 0px 3px 3px #afafaf;
+            background-color: #fff;
+        }
+
+        .imgEffectAnimation {
+            transform: translateY(0px) !important;
+            transition: ease-in-out 0.6s;
+
+
+        }
+
+        .imgTechContainer:first-child {
+            margin-top: 10px;
+        }
+
+        .imgTechContainer:nth-child(2) {
+            transform: translateY(-60px);
+        }
+
+        .imgTechContainer:nth-child(3) {
+            transform: translateY(-120px);
+        }
+
+        .imgTechContainer:nth-child(4) {
+            transform: translateY(-180px);
+        }
+    }
+
+    .detailItem:hover .usedTech {
+        display: block;
+    }
 }
 
 
@@ -472,6 +541,32 @@ a {
 
         .galleryItemOutline+.galleryItemOutline {
             margin-top: 5px;
+        }
+
+        .detailItem:hover .usedTech {
+            display: none !important;
+        }
+
+        .detailItem {
+            .usedTech {
+                display: flex;
+                justify-content: space-around;
+                top: unset;
+                left: 0;
+                right: unset;
+                width: 100% !important;
+                height: 60px !important;
+                margin-top: 10px;
+
+                .imgTechContainer {}
+
+                .imgTech {}
+
+                .imgTechContainer:first-child {
+                    margin-top: unset;
+                }
+            }
+
         }
     }
 }

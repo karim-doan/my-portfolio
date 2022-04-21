@@ -1,6 +1,7 @@
 
-import styles from './Projects.module.scss'
 import clsx from 'clsx'
+
+import styles from './Projects.module.scss'
 import { types, projects } from '../../Data'
 import { useStore, actions } from '../../stores'
 import GalleryItem from './GalleryItem'

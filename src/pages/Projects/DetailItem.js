@@ -1,16 +1,19 @@
 
-import { useEffect } from 'react'
+import $ from 'jquery'
 import clsx from 'clsx'
+import { useEffect, useState, useRef } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faX, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+
 import styles from './Projects.module.scss'
 import { projects } from '../../Data/index.js'
 import { useStore, actions } from '../../stores'
 import ImageSlide from './ImageSlide.js'
-import $ from 'jquery'
 
 function DetailItem({ itemIndex }) {
     const [state, dispatch] = useStore()
+    const [show, setShow] = useState(false)
+    const imgRef = useRef()
     let props = ''
 
     const handleBtnClose = () => {
@@ -21,14 +24,23 @@ function DetailItem({ itemIndex }) {
         const btnClose = `.${clsx(styles.btnClose)}`
         const item = `.${clsx(styles.detailItem)}`
         const container = `.${clsx(styles.detailContainer)}`
+        const tech = `.${clsx(styles.usedTech)}`
 
         $(btnClose).on('click', handleBtnClose)
         $(item).on('click', function (e) {
             e.stopPropagation();
         });
         $(container).on('click', handleBtnClose)
+        $(tech).on('click', handleBtnClose)
 
     }, [])
+
+    useEffect(() => {
+        setTimeout(() => {
+            $(`.${clsx(styles.imgTech)}`).addClass(`${clsx(styles.rotate)}`) 
+            $(`.${clsx(styles.imgTechContainer)}`).addClass(`${clsx(styles.imgEffectAnimation)}`) 
+        }, 500)
+    })
 
     return (
         projects.map(project => {
@@ -96,7 +108,28 @@ function DetailItem({ itemIndex }) {
                                     </div>
                                 </div>
                             </div>
+                            <div className={clsx(styles.usedTech)}>
+                                <div className={clsx(styles.usedTechEffect)}>
 
+                                    {project.usedTech
+                                        .filter(tech =>
+                                            tech.name === "ReactJS" || "Jquery" || "NodeJS" || "Github" || "Boostrap")
+                                        .map((obj, index) => (
+                                            <div
+                                                className={clsx(styles.imgTechContainer)}
+                                                key={index}
+                                            >
+                                                <img
+                                                    className={clsx(styles.imgTech)}
+                                                    src={obj.img}
+                                                    alt={obj.name}
+                                                    title={obj.name}
+                                                />
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            </div>
                         </div>
                     </ div>
                 )

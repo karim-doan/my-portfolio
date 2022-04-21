@@ -50,6 +50,10 @@ nav {
   display: flex;
 }
 
+.transform-y--none {
+  transform: translateY(0px) !important;
+}
+
 .justify-content-between {
   display: flex;
   justify-content: space-between;

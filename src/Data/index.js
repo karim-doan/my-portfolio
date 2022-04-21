@@ -4,6 +4,11 @@ import myPortfolio from '../images/myPortfolio.png'
 import myPortfolioProject from '../images/myPortfolioProject.png'
 import myPortfolioProjectTab from '../images/myPortfolioProjectTab.jpg'
 import myPortfolioProjectMobi from '../images/myPortfolioProjectMobi.jpg'
+import ReactJSLogo from '../images/ReactIcon.png'
+import BoostrapLogo from '../images/boostrapLogo.png'
+import JqueryLogo from '../images/jqueryLogo.png'
+import NodeJSLogo from '../images/nodeJS.png'
+import GitHubLogo from '../images/GitHubLogo.png'
 
 export const types = ['All', 'React', 'JavaScript']
 
@@ -19,6 +24,13 @@ export const projects = [
       thumbnail: myPortfolio,
       illustration: [myPortfolio, myPortfolioProject, myPortfolioProjectTab, myPortfolioProjectMobi],
     },
+    usedTech: ['ReactJS', 'Jquery', 'NodeJS', 'Github'],
+    usedTech: [
+      { id: '1', name: 'ReactJS', img: ReactJSLogo },
+      { id: '2', name: 'Jquery', img: JqueryLogo },
+      { id: '3', name: 'NodeJS', img: NodeJSLogo },
+      { id: '4', name: 'Github', img: GitHubLogo }
+    ],
     responsive: true,
     urlLive: 'https://github.com/hoangkim58/myprofile',
     urlCode: 'https://github.com/hoangkim58/myprofile',
@@ -35,6 +47,11 @@ export const projects = [
       thumbnail: dayGiftPC,
       illustration: [dayGiftPC],
     },
+    usedTech: [
+      { id: '1', name: 'Jquery', img: JqueryLogo },
+      { id: '2', name: 'Github', img: GitHubLogo },
+      { id: '3', name: 'Boostrap', img: BoostrapLogo },
+    ],
     responsive: true,
     urlLive: 'https://hoangkim58.github.io/daygift/',
     urlCode: 'https://github.com/hoangkim58/daygift',
@@ -51,6 +68,10 @@ export const projects = [
       thumbnail: fakeShopee,
       illustration: [fakeShopee],
     },
+    usedTech: [ 
+      { id: '1', name: 'Jquery', img: JqueryLogo }, 
+      { id: '2', name: 'Github', img: GitHubLogo },
+    ],
     responsive: false,
     urlLive: 'https://hoangkim58.github.io/fakeshopee/',
     urlCode: 'https://github.com/hoangkim58/fakeshopee/tree/master',
@@ -67,6 +88,7 @@ export const projects = [
       thumbnail: 'https://wallpaperaccess.com/full/2588759.jpg',
       illustration: ['https://wallpaperaccess.com/full/2588759.jpg'],
     },
+    usedTech: [],
     responsive: false,
     urlLive: 'urlLive',
     urlCode: 'urlCode',
