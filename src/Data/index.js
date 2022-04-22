@@ -135,7 +135,7 @@ export const myInfo = {
   education: {
     time: '2017 - 2022',
     content: 'The Deegree of Engineer',
-    major: 'Electronic',
+    major: 'Electronics',
     gpa: '7.3/10',
     at: 'Sai Gon University'
   },

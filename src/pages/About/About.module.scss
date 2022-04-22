@@ -42,7 +42,7 @@ body {
     .container {
         max-width: 800px;
         min-height: 1100px;
-        padding: 50px 100px;
+        padding: 120px 100px;
         margin: 39px auto;
         background-color: #ffffff;
         box-shadow: 0px 0px 12px 2px #dedede;
@@ -101,7 +101,7 @@ body {
         .indentifierContact {
             position: absolute;
             right: 0;
-            bottom: 0;
+            bottom: -6px;
             width: 115px;
             height: 150px;
         }
@@ -130,6 +130,9 @@ body {
 
         .subjectContainer {
             animation: cardZoomUp 1.3s;
+        }
+        .subjectContainer  + .subjectContainer {
+            margin-top: 20px;
         }
 
         .contact {

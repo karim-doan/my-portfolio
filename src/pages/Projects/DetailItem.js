@@ -37,8 +37,8 @@ function DetailItem({ itemIndex }) {
 
     useEffect(() => {
         setTimeout(() => {
-            $(`.${clsx(styles.imgTech)}`).addClass(`${clsx(styles.rotate)}`) 
-            $(`.${clsx(styles.imgTechContainer)}`).addClass(`${clsx(styles.imgEffectAnimation)}`) 
+            $(`.${clsx(styles.imgTech)}`).addClass(`${clsx(styles.rotate)}`)
+            $(`.${clsx(styles.imgTechContainer)}`).addClass(`${clsx(styles.imgEffectAnimation)}`)
         }, 500)
     })
 
@@ -119,12 +119,15 @@ function DetailItem({ itemIndex }) {
                                                 className={clsx(styles.imgTechContainer)}
                                                 key={index}
                                             >
-                                                <img
-                                                    className={clsx(styles.imgTech)}
-                                                    src={obj.img}
-                                                    alt={obj.name}
-                                                    title={obj.name}
-                                                />
+                                                <div className={clsx(styles.imgTechBG)}>
+                                                    <div
+                                                        className={clsx(styles.imgTech)}
+                                                        style={{backgroundImage: `url(${obj.img})`}}
+                                                        // src={obj.img}
+                                                        // alt={obj.name}
+                                                        title={obj.name}
+                                                    />
+                                                </div>
                                             </div>
                                         ))
                                     }

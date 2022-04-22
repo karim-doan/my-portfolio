@@ -62,7 +62,6 @@ export default function ImageSlide(images) {
             setSlide(false)
         }
 
-        console.log(currentSlide)
     }, [currentSlide])
 
 
