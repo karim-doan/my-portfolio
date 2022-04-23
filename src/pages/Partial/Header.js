@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import $ from 'jquery'
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import clsx from 'clsx';
@@ -13,24 +13,10 @@ function Header() {
     const [navActive, setNavActive] = useState(false)
     const [projectActive, setProjectActive] = useState(false)
     const [aboutActive, setAboutActive] = useState(false)
-    const { pathname } = useLocation()
 
     useEffect(() => {
         setHeightScreen(window.innerHeight)
     }, [heightScreen])
-
-    // handleGotop
-    useEffect(() => {
-
-        const goto = () => {
-            window.scrollTo(0, heightScreen)
-        }
-        
-        return () => {
-            goto()
-        }
-
-    },[pathname])
 
     //handleMouseEnter handleMouseLeave btn-see__more, **hover event
     useEffect(() => {

@@ -1,6 +1,5 @@
 
-import clsx from 'clsx'
-
+import clsx from 'clsx' 
 import styles from './Projects.module.scss'
 import { types, projects } from '../../Data'
 import { useStore, actions } from '../../stores'

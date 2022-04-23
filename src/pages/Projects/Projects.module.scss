@@ -447,8 +447,7 @@ a {
         width: 160px;
         height: 100%;
         transform: rotate(0);
-        transition: ease-in 0.6s;
-        display: none;
+        transition: ease-in 0.6s; 
 
         .usedTechEffect {
             width: 50px;
@@ -493,8 +492,6 @@ a {
         .imgEffectAnimation {
             transform: translateY(0px) !important;
             transition: ease-in-out 0.6s;
-
-
         }
 
         .imgTechContainer:first-child {
@@ -513,10 +510,7 @@ a {
             transform: translateY(-180px);
         }
     }
-
-    .detailItem:hover .usedTech {
-        display: block;
-    }
+ 
 }
 
 

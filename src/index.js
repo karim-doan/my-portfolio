@@ -5,11 +5,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { StoreProvider } from './stores'
+import { ScrollTop } from './functions'
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <StoreProvider>
+        <ScrollTop />
         <App />
       </StoreProvider>
     </Router>

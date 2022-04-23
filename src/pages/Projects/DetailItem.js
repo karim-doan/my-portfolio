@@ -1,7 +1,7 @@
 
 import $ from 'jquery'
 import clsx from 'clsx'
-import { useEffect, useState, useRef } from 'react'
+import { useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faX, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
@@ -12,11 +12,10 @@ import ImageSlide from './ImageSlide.js'
 
 function DetailItem({ itemIndex }) {
     const [state, dispatch] = useStore()
-    const [show, setShow] = useState(false)
-    const imgRef = useRef()
     let props = ''
 
     const handleBtnClose = () => {
+
         dispatch(actions.resetItem())
     }
 
@@ -32,14 +31,24 @@ function DetailItem({ itemIndex }) {
         });
         $(container).on('click', handleBtnClose)
         $(tech).on('click', handleBtnClose)
-
     }, [])
 
     useEffect(() => {
+
+        const imgTech = $(`.${clsx(styles.imgTech)}`)
+        const rotateClass = `${clsx(styles.rotate)}`
+        const imgTechContainer = $(`.${clsx(styles.imgTechContainer)}`)
+        const animationClass = `${clsx(styles.imgEffectAnimation)}`
+
         setTimeout(() => {
-            $(`.${clsx(styles.imgTech)}`).addClass(`${clsx(styles.rotate)}`)
-            $(`.${clsx(styles.imgTechContainer)}`).addClass(`${clsx(styles.imgEffectAnimation)}`)
+            imgTech.addClass(rotateClass)
+            imgTechContainer.addClass(animationClass)
         }, 500)
+
+        return () => { 
+            imgTech.removeClass(rotateClass)
+            imgTechContainer.removeClass(animationClass)
+        }
     })
 
     return (
@@ -122,9 +131,7 @@ function DetailItem({ itemIndex }) {
                                                 <div className={clsx(styles.imgTechBG)}>
                                                     <div
                                                         className={clsx(styles.imgTech)}
-                                                        style={{backgroundImage: `url(${obj.img})`}}
-                                                        // src={obj.img}
-                                                        // alt={obj.name}
+                                                        style={{ backgroundImage: `url(${obj.img})` }}
                                                         title={obj.name}
                                                     />
                                                 </div>

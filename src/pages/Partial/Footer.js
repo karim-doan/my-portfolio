@@ -2,10 +2,12 @@
 import clsx from "clsx"
 import styles from "./Footer.module.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faInstagram, } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faCopyright, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
 function Footer() {
+ 
+
     return (
         <>
             <div className={clsx(styles.Footer, '')}>
@@ -43,15 +45,24 @@ function Footer() {
                     </div>
                     <div className={clsx(styles.footerContent)}>
                         <div className={clsx(styles.iconContainer, 'justify-content-center')}>
-                            <div className={clsx(styles.iconContact, 'justify-content-center')}>
+                            <a
+                                href='https://www.facebook.com/kim99.doan/'
+                                target='_blank'
+                                className={clsx(styles.iconContact, 'justify-content-center')}>
                                 <FontAwesomeIcon className={clsx(styles.icon)} icon={faFacebook} />
-                            </div>
-                            <div className={clsx(styles.iconContact, 'justify-content-center')}>
+                            </a>
+                            <a
+                                href='?'
+                                target='_blank'
+                                className={clsx(styles.iconContact, 'justify-content-center')}>
                                 <FontAwesomeIcon className={clsx(styles.icon)} icon={faInstagram} />
-                            </div>
-                            <div className={clsx(styles.iconContact, 'justify-content-center')}>
-                                <FontAwesomeIcon className={clsx(styles.icon)} icon={faCopyright} />
-                            </div>
+                            </a>
+                            <a
+                                href='https://github.com/hoangkim58'
+                                target='_blank'
+                                className={clsx(styles.iconContact, 'justify-content-center')}>
+                                <FontAwesomeIcon className={clsx(styles.icon)} icon={faGithub} />
+                            </a>
                         </div>
                         <div className={clsx(styles.copyRightContainer, 'justify-content-center')}>
                             Doan Hoang Kim

@@ -117,13 +117,14 @@ export const myInfo = {
       name: 'facebook',
       content: 'https://www.facebook.com/kim99.doan/'
     },
+   
     {
-      id: 4,
+      id: 5,
       name: 'zalo',
       content: '0967718190 / 0767108684'
     },
     {
-      id: 5,
+      id: 6,
       name: 'github',
       content: 'https://github.com/hoangkim58'
     },
@@ -134,7 +135,7 @@ export const myInfo = {
   },
   education: {
     time: '2017 - 2022',
-    content: 'The Deegree of Engineer',
+    content: 'The Degree of Engineer',
     major: 'Electronics',
     gpa: '7.3/10',
     at: 'Sai Gon University'
@@ -143,7 +144,7 @@ export const myInfo = {
     programLanguages: 'HTML, CSS, JavaScript',
     library: 'React JS',
     tools: 'Github',
-    database: 'Mongoose DB',
+    database: 'NoSQL (Mongoose DB)',
   },
   project: {
     shopee: '...',
