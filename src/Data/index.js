@@ -9,6 +9,10 @@ import BoostrapLogo from '../images/boostrapLogo.png'
 import JqueryLogo from '../images/jqueryLogo.png'
 import NodeJSLogo from '../images/nodeJS.png'
 import GitHubLogo from '../images/GitHubLogo.png'
+import weather from '../images/weather.png'
+import weatherData from '../images/weatherData.png'
+import weatherClock from '../images/weatherClock.png'
+
 
 export const types = ['All', 'React', 'JavaScript']
 
@@ -58,6 +62,26 @@ export const projects = [
 
   },
   {
+    id: 4,
+    name: 'Weather Focecast',
+    briefDescription: `A basic weather forecast app`,
+    description: `Create a simple login system with Facebook Account, get weather information
+    from OpenWeatherMap API and show location of this city on map with Leaflet
+    API. Furthermore, users can enter voice requests with Web Speech API.
+    `,
+    framework: '',
+    type: 'JavaScript',
+    image: {
+      thumbnail: weather,
+      illustration: [weather, weatherData, weatherClock],
+    },
+    usedTech: [],
+    responsive: true,
+    urlLive: 'https://hoangkim58.github.io/weather-app/',
+    urlCode: 'https://github.com/hoangkim58/weather-app',
+
+  },
+  {
     id: 3,
     name: ' Fake Shopee',
     briefDescription: 'e-commerce platform',
@@ -68,17 +92,17 @@ export const projects = [
       thumbnail: fakeShopee,
       illustration: [fakeShopee],
     },
-    usedTech: [ 
-      { id: '1', name: 'Jquery', img: JqueryLogo }, 
+    usedTech: [
+      { id: '1', name: 'Jquery', img: JqueryLogo },
       { id: '2', name: 'Github', img: GitHubLogo },
     ],
     responsive: false,
     urlLive: 'https://hoangkim58.github.io/fakeshopee/',
     urlCode: 'https://github.com/hoangkim58/fakeshopee/tree/master',
 
-  },
+  }, 
   {
-    id: 4,
+    id: 5,
     name: ' Coming Soon',
     briefDescription: '',
     description: '',
@@ -99,7 +123,7 @@ export const projects = [
 export const myInfo = {
   gerneral: {
     name: 'Đoàn Hoàng Kim',
-    position: 'Frontend Developer'
+    position: 'Web Developer'
   },
   contacts: [
     {
@@ -117,7 +141,7 @@ export const myInfo = {
       name: 'facebook',
       content: 'https://www.facebook.com/kim99.doan/'
     },
-   
+
     {
       id: 5,
       name: 'zalo',
@@ -131,7 +155,10 @@ export const myInfo = {
   ],
   objective: {
     name: 'Short',
-    content: '........',
+    content: `I have less than one year of experience for software development.  Quickly
+    adapting to the highly collaborative work environment, working hard, not afraid
+    to difficulties, interested in finding a solution to the problem and always ready
+    to learn new technologies and knowledge.`,
   },
   education: {
     time: '2017 - 2022',
@@ -147,11 +174,17 @@ export const myInfo = {
     database: 'NoSQL (Mongoose DB)',
   },
   project: {
-    shopee: '...',
-    giftgame: '...',
-    netflix: '...',
+    weatherFocecast: `Create a simple login system with Facebook Account, get weather information
+    from OpenWeatherMap API and show location of this city on map with Leaflet
+    API. Furthermore, users can enter voice requests with Web Speech API.
+    `,
+    myPortfolio: `To present a few personal projects and my CV. This project is built using the
+    React library with the support of several other libraries`,
+    miniGame: `A basic website that includes some small apps inside, such as a countdown
+    feature, women's day greeting cards, and birthday greeting cards.
+    `,
   },
   certification: {
-    toeic: 'Score 500'
+    toeic: 'TOEIC Certificate with score 500 issued by IIG VIETNAM. '
   }
 }

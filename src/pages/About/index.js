@@ -46,10 +46,7 @@ function About({ id }) {
         <div className={clsx(styles.objective, styles.subjectContainer)}>
           <div className={clsx(styles.titleFormatCenter, styles.titleContainer)}>objective</div>
           <div className={clsx(styles.titleContentContainer)}>
-            <div className={clsx(styles.titleSubContainer)}>
-              <div className={clsx(styles.titleContent)}>
-                {objective.name}
-              </div>
+            <div className={clsx(styles.titleSubContainer)}> 
               <div className={clsx(styles.detailedContent)}>
                 {objective.content}
               </div>
@@ -113,31 +110,31 @@ function About({ id }) {
           <div className={clsx(styles.titleFormatCenter, styles.titleContainer)}>Personal projects</div>
           <div className={clsx(styles.titleContentContainer)}>
             <div className={clsx(styles.titleSubContainer)}>
-              <div className={clsx(styles.titleContent)}>
-                Fake Shopee
+              <div className={clsx(styles.titleContent, styles.marginTop10)}>
+                Weather Focecast
               </div>
               <div className={clsx(styles.detailedContent)}>
-                {project.shopee}
+                {project.weatherFocecast}
               </div>
             </div>
           </div>
           <div className={clsx(styles.titleContentContainer)}>
             <div className={clsx(styles.titleSubContainer)}>
-              <div className={clsx(styles.titleContent)}>
-                Gift Game
+              <div className={clsx(styles.titleContent, styles.marginTop10)}>
+                My Portfolio
               </div>
               <div className={clsx(styles.detailedContent)}>
-                {project.giftgame}
+                {project.myPortfolio}
               </div>
             </div>
           </div>
           <div className={clsx(styles.titleContentContainer)}>
             <div className={clsx(styles.titleSubContainer)}>
-              <div className={clsx(styles.titleContent)}>
-                Netflix
+              <div className={clsx(styles.titleContent, styles.marginTop10)}>
+                Mini Game
               </div>
               <div className={clsx(styles.detailedContent)}>
-                {project.netflix}
+                {project.miniGame}
               </div>
             </div>
           </div>

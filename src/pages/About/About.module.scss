@@ -2,6 +2,10 @@
 
 body {
     --colorAbout: #f9794c;
+} 
+
+.marginTop10 {
+    margin-top: 10px;
 }
 
 .About {
@@ -91,7 +95,7 @@ body {
         }
 
         .titleSubContainer {
-            display: flex;
+            // display: flex;
             font-weight: 400px;
             margin-bottom: 6px;
             font-family: 'Roboto', sans-serif;
@@ -110,12 +114,12 @@ body {
             height: 150px;
             width: 109px;
         }
-
+ 
         .titleContent {
             position: relative;
             display: flex;
             font-weight: 500;
-            width: 120px;
+            margin-bottom: 6px; 
             text-transform: capitalize;
         }
 
@@ -131,7 +135,8 @@ body {
         .subjectContainer {
             animation: cardZoomUp 1.3s;
         }
-        .subjectContainer  + .subjectContainer {
+
+        .subjectContainer+.subjectContainer {
             margin-top: 20px;
         }
 
@@ -210,6 +215,10 @@ body {
     html {}
 
     body {
+
+        .paddingFirstLine::first-letter {
+            padding-left: 0px;
+        }
 
         .container {
             padding: 50px 0 !important;
