@@ -25,8 +25,8 @@ export const projects = [
   {
     id: 9,
     name: 'Memory Game',
-    briefDescription: '',
-    description: '',
+    briefDescription: 'It\'s your memory challenge',
+    description: 'Rule: Click another card for the next time and you will win when you got 12 point.',
     framework: 'AngularJS / Node JS',
     type: 'React',
     image: {
