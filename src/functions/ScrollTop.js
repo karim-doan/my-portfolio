@@ -1,31 +1,27 @@
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
-import { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom' 
-
-// handleGotop
+// handle Go top
 const ScrollTop = () => {
+  const [heightScreen, setHeightScreen] = useState(1000);
+  const { pathname } = useLocation();
 
-    const [heightScreen, setHeightScreen] = useState(1000)
-    const { pathname } = useLocation()
+  useEffect(() => {
+    setHeightScreen(window.innerHeight);
+  }, [heightScreen]);
 
-    useEffect(() => { 
-        setHeightScreen(window.innerHeight)
-    }, [heightScreen])
+  useEffect(() => {
+    const goTop = () => {
+      setTimeout(() => {
+        window.scrollTo(0, heightScreen);
+      }, 0);
+    };
+    return () => {
+      goTop();
+    };
+  }, [pathname]);
 
-    useEffect(() => {
-        const goTop = () => {
-            setTimeout(() => {
-                window.scrollTo(0, heightScreen)
-            },0)
-        }
+  return;
+};
 
-        return () => {
-            goTop() 
-        }
-
-    }, [pathname]) 
-    
-    return
-}
-
-export { ScrollTop }
+export { ScrollTop };

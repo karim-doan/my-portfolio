@@ -1,6 +1,7 @@
 
 import clsx from "clsx";
 import styles from "./About.module.scss";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faPhone, faPhoneSquare, faEnvelope } from '@fortawesome/free-solid-svg-icons'

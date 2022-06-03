@@ -52,7 +52,12 @@ function GalleryItem({
         hpp()
         return () => {
             label && label.classList.remove(animation)
-            itemImage.classList.remove(animation)
+            if(!itemImage) {
+
+            } else {
+                itemImage.classList.remove(animation)
+
+            }
             item.style.display = 'flex'
         }
 

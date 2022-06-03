@@ -10,13 +10,14 @@ import './App.css'
 function App() {
   
   return (
+    
     <div className="App"> 
       <Header/>
 
       <Routes>
-        <Route path="/myprofile" element={<Home id='body-content' />} />
-        <Route path="/myprofile/Projects" element={<Projects id='body-content' />} />
-        <Route path="/myprofile/About" element={<About id='body-content' />} />
+        <Route path="/" element={<Home id='body-content' />} />
+        <Route path="/Projects" element={<Projects id='body-content' />} />
+        <Route path="/About" element={<About id='body-content' />} />
       </Routes >
 
       <Footer />

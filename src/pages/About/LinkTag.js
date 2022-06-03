@@ -8,6 +8,7 @@ export default function LinkTag({ children, types }) {
     if (types) {
         Component = 'a'
         props = { ...props, href: children }
+
     }
     
  

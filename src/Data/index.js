@@ -7,16 +7,43 @@ import myPortfolioProjectMobi from '../images/myPortfolioProjectMobi.jpg'
 import ReactJSLogo from '../images/ReactIcon.png'
 import BoostrapLogo from '../images/boostrapLogo.png'
 import JqueryLogo from '../images/jqueryLogo.png'
+import SCSSLogo from '../images/SCSSLogo.png'
 import NodeJSLogo from '../images/nodeJS.png'
 import GitHubLogo from '../images/GitHubLogo.png'
+import TypeScriptLogo from '../images/TypeScriptLogo.png'
+import AngularJSLogo from '../images/AngularJS.png'
 import weather from '../images/weather.png'
 import weatherData from '../images/weatherData.png'
 import weatherClock from '../images/weatherClock.png'
+import MemoryAlbums from '../images/MemoryGameAlbum.png'
+import MemoryPlay from '../images/MemoryGamePlay.png'
 
 
 export const types = ['All', 'React', 'JavaScript']
 
 export const projects = [
+  {
+    id: 9,
+    name: 'Memory Game',
+    briefDescription: '',
+    description: '',
+    framework: 'AngularJS / Node JS',
+    type: 'React',
+    image: {
+      thumbnail: MemoryAlbums,
+      illustration: [MemoryAlbums, MemoryPlay],
+    },
+    usedTech: [
+      { id: '1', name: 'TypeScript', img: TypeScriptLogo },
+      { id: '1', name: 'AngularJS', img: AngularJSLogo },
+      { id: '1', name: 'SCSS', img: SCSSLogo },
+      { id: '2', name: 'Github', img: GitHubLogo },
+    ],
+    responsive: false,
+    urlLive: 'https://karim-doan.github.io/memory-game',
+    urlCode: 'https://github.com/karim-doan/memory-game',
+
+  },
   {
     id: 1,
     name: 'My portfolio',
@@ -28,16 +55,16 @@ export const projects = [
       thumbnail: myPortfolio,
       illustration: [myPortfolio, myPortfolioProject, myPortfolioProjectTab, myPortfolioProjectMobi],
     },
-    usedTech: ['ReactJS', 'Jquery', 'NodeJS', 'Github'],
     usedTech: [
       { id: '1', name: 'ReactJS', img: ReactJSLogo },
       { id: '2', name: 'Jquery', img: JqueryLogo },
       { id: '3', name: 'NodeJS', img: NodeJSLogo },
-      { id: '4', name: 'Github', img: GitHubLogo }
+      { id: '4', name: 'Github', img: GitHubLogo },
+
     ],
     responsive: true,
-    urlLive: 'https://github.com/hoangkim58/myprofile',
-    urlCode: 'https://github.com/hoangkim58/myprofile',
+    urlLive: 'https://karim-doan.github.io/my-portfolio/',
+    urlCode: 'https://github.com/karim-doan/myprofile',
 
   },
   {
@@ -57,8 +84,8 @@ export const projects = [
       { id: '3', name: 'Boostrap', img: BoostrapLogo },
     ],
     responsive: true,
-    urlLive: 'https://hoangkim58.github.io/daygift/',
-    urlCode: 'https://github.com/hoangkim58/daygift',
+    urlLive: 'https://karim-doan.github.io/mini-game/',
+    urlCode: 'https://github.com/karim-doan/mini-game',
 
   },
   {
@@ -77,8 +104,8 @@ export const projects = [
     },
     usedTech: [],
     responsive: true,
-    urlLive: 'https://hoangkim58.github.io/weather-app/',
-    urlCode: 'https://github.com/hoangkim58/weather-app',
+    urlLive: 'https://karim-doan.github.io/weather-app/',
+    urlCode: 'https://github.com/karim-doan/weather-app',
 
   },
   {
@@ -97,12 +124,12 @@ export const projects = [
       { id: '2', name: 'Github', img: GitHubLogo },
     ],
     responsive: false,
-    urlLive: 'https://hoangkim58.github.io/fakeshopee/',
-    urlCode: 'https://github.com/hoangkim58/fakeshopee/tree/master',
+    urlLive: 'https://karim-doan.github.io/home-shopee-page/',
+    urlCode: 'https://github.com/karim-doan/home-shopee-page/tree/master',
 
-  }, 
+  },
   {
-    id: 5,
+    id: 50,
     name: ' Coming Soon',
     briefDescription: '',
     description: '',
