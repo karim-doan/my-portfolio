@@ -142,11 +142,11 @@ function Header() {
             <nav id='navbar-lists' className={clsx(styles.navbarLists, 'd-flex')}>
                 <ul className="grid justify-content-between " style={{ width: '1200px' }} >
                     <li >
-                        <Link className={clsx(styles.headerPageLink, 'a-prevent-default')} to='/'>Home</Link>
+                        <Link className={clsx(styles.headerPageLink, 'a-prevent-default')} to='/my-portfolio'>Home</Link>
                     </li>
                     <li >
-                        <Link className={clsx(styles.headerPageLink, 'a-prevent-default')} to='/About'>About</Link>
-                        <Link className={clsx(styles.headerPageLink, 'a-prevent-default')} to='/Projects'>Projects</Link>
+                        <Link className={clsx(styles.headerPageLink, 'a-prevent-default')} to='/my-portfolio/About'>About</Link>
+                        <Link className={clsx(styles.headerPageLink, 'a-prevent-default')} to='/my-portfolio/Projects'>Projects</Link>
                     </li>
                 </ul>
             </nav>
