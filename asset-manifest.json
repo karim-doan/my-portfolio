@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/my-portfolio/static/css/main.c3c50702.css",
+    "main.js": "/my-portfolio/static/js/main.b9e6bab6.js",
+    "static/js/787.2746eaee.chunk.js": "/my-portfolio/static/js/787.2746eaee.chunk.js",
+    "static/media/wallpaper.gif": "/my-portfolio/static/media/wallpaper.2f4144b4c2abe22ac4fb.gif",
+    "static/media/MemoryGamePlay.png": "/my-portfolio/static/media/MemoryGamePlay.e57cc88b96d0b54c82d1.png",
+    "static/media/myPortfolio.png": "/my-portfolio/static/media/myPortfolio.ef07cd4ae3e26dda27d6.png",
+    "static/media/dayGiftPC.png": "/my-portfolio/static/media/dayGiftPC.c442ac09115892afe25c.png",
+    "static/media/fakeShopee.png": "/my-portfolio/static/media/fakeShopee.8781d3de214f7cb9e9a3.png",
+    "static/media/MemoryGameAlbum.png": "/my-portfolio/static/media/MemoryGameAlbum.16a662bc5c1b1f15fee6.png",
+    "static/media/myPortfolioProjectMobi.jpg": "/my-portfolio/static/media/myPortfolioProjectMobi.bf6078367dcefd312f13.jpg",
+    "static/media/myPortfolioProjectTab.jpg": "/my-portfolio/static/media/myPortfolioProjectTab.8afcddb95fb6adfd6839.jpg",
+    "static/media/weatherData.png": "/my-portfolio/static/media/weatherData.82af32fe39d55e5e6578.png",
+    "static/media/myPortfolioProject.png": "/my-portfolio/static/media/myPortfolioProject.1721ebf8ecdd4045e468.png",
+    "static/media/ReactIcon.png": "/my-portfolio/static/media/ReactIcon.73dbb5bcec516da82694.png",
+    "static/media/myImage.jpg": "/my-portfolio/static/media/myImage.078f89e62f53e1d995d6.jpg",
+    "static/media/weatherClock.png": "/my-portfolio/static/media/weatherClock.d6484aff8f8c05b666ae.png",
+    "static/media/jqueryLogo.png": "/my-portfolio/static/media/jqueryLogo.7808859670674d16c485.png",
+    "static/media/SCSSLogo.png": "/my-portfolio/static/media/SCSSLogo.95b95881f872d00e7e7b.png",
+    "static/media/weather.png": "/my-portfolio/static/media/weather.e3b2dab5d83dbc8ea387.png",
+    "static/media/GitHubLogo.png": "/my-portfolio/static/media/GitHubLogo.05525cd9027955dbe054.png",
+    "static/media/TypeScriptLogo.png": "/my-portfolio/static/media/TypeScriptLogo.9b1779a2fd3504559e59.png",
+    "static/media/boostrapLogo.png": "/my-portfolio/static/media/boostrapLogo.a0e9ce78cae640a7e5cf.png",
+    "static/media/AngularJS.png": "/my-portfolio/static/media/AngularJS.ea9c274178f0927fbfac.png",
+    "index.html": "/my-portfolio/index.html",
+    "main.c3c50702.css.map": "/my-portfolio/static/css/main.c3c50702.css.map",
+    "main.b9e6bab6.js.map": "/my-portfolio/static/js/main.b9e6bab6.js.map",
+    "787.2746eaee.chunk.js.map": "/my-portfolio/static/js/787.2746eaee.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3c50702.css",
+    "static/js/main.b9e6bab6.js"
+  ]
+}
