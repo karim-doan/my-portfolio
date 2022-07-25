@@ -38,7 +38,7 @@ function GalleryItem({
 
                 if (type !== typeItem) {
 
-                    itemImage.classList.add(animation)
+                    itemImage?.classList.add(animation)
                     label && label.classList.add(animation)
                     setTimeout(() => {
                         item.style.display = 'none'

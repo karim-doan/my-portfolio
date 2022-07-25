@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import clsx from 'clsx';
 import styles from './Header.module.scss';
+import { path } from '../../enviroment.js';
 
 function Header() {
 
@@ -142,11 +143,11 @@ function Header() {
             <nav id='navbar-lists' className={clsx(styles.navbarLists, 'd-flex')}>
                 <ul className="grid justify-content-between " style={{ width: '1200px' }} >
                     <li >
-                        <Link className={clsx(styles.headerPageLink, 'a-prevent-default')} to='/my-portfolio'>Home</Link>
+                        <Link className={clsx(styles.headerPageLink, 'a-prevent-default')} to={path.home}>Home</Link>
                     </li>
                     <li >
-                        <Link className={clsx(styles.headerPageLink, 'a-prevent-default')} to='/my-portfolio/About'>About</Link>
-                        <Link className={clsx(styles.headerPageLink, 'a-prevent-default')} to='/my-portfolio/Projects'>Projects</Link>
+                        <Link className={clsx(styles.headerPageLink, 'a-prevent-default')} to={path.aboutPage}>About</Link>
+                        <Link className={clsx(styles.headerPageLink, 'a-prevent-default')} to={path.projectPage}>Projects</Link>
                     </li>
                 </ul>
             </nav>
