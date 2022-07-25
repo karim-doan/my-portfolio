@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.c3c50702.css",
-    "main.js": "/my-portfolio/static/js/main.8fb1c5b3.js",
+    "main.css": "/my-portfolio/static/css/main.0d1ffc37.css",
+    "main.js": "/my-portfolio/static/js/main.a1fb3bf1.js",
     "static/js/787.2746eaee.chunk.js": "/my-portfolio/static/js/787.2746eaee.chunk.js",
     "static/media/wallpaper.gif": "/my-portfolio/static/media/wallpaper.2f4144b4c2abe22ac4fb.gif",
     "static/media/MemoryGamePlay.png": "/my-portfolio/static/media/MemoryGamePlay.e57cc88b96d0b54c82d1.png",
@@ -24,12 +24,12 @@
     "static/media/boostrapLogo.png": "/my-portfolio/static/media/boostrapLogo.a0e9ce78cae640a7e5cf.png",
     "static/media/AngularJS.png": "/my-portfolio/static/media/AngularJS.ea9c274178f0927fbfac.png",
     "index.html": "/my-portfolio/index.html",
-    "main.c3c50702.css.map": "/my-portfolio/static/css/main.c3c50702.css.map",
-    "main.8fb1c5b3.js.map": "/my-portfolio/static/js/main.8fb1c5b3.js.map",
+    "main.0d1ffc37.css.map": "/my-portfolio/static/css/main.0d1ffc37.css.map",
+    "main.a1fb3bf1.js.map": "/my-portfolio/static/js/main.a1fb3bf1.js.map",
     "787.2746eaee.chunk.js.map": "/my-portfolio/static/js/787.2746eaee.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c3c50702.css",
-    "static/js/main.8fb1c5b3.js"
+    "static/css/main.0d1ffc37.css",
+    "static/js/main.a1fb3bf1.js"
   ]
 }
