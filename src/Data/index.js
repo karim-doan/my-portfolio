@@ -156,23 +156,23 @@ export const myInfo = {
     {
       id: 1,
       name: 'phone',
-      content: '(84) 967718190'
+      content: '(84) 967718xxx'
     },
     {
       id: 2,
       name: 'email',
-      content: 'hoangkim.work99@gmail.com'
+      content: 'example123@gmail.com'
     },
     {
       id: 3,
       name: 'facebook',
-      content: 'https://www.facebook.com/kim99.doan/'
+      content: 'https://www.facebook.com/example/'
     },
 
     {
       id: 5,
       name: 'zalo',
-      content: '0967718190 / 0767108684'
+      content: '0967718xxx / 0767108xxx'
     },
     {
       id: 6,
